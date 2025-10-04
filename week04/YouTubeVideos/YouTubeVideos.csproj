@@ -8,4 +8,11 @@
     <Nullable>disable</Nullable>
   </PropertyGroup>
 
+  <!-- Exclude test sources placed under the YouTubeVideos.Tests folder so the main project
+       doesn't try to compile them (they belong to the test project). -->
+  <ItemGroup>
+    <Compile Remove="YouTubeVideos.Tests\**\*.cs" />
+    <None Remove="YouTubeVideos.Tests\**\*" />
+  </ItemGroup>
+
 </Project>
